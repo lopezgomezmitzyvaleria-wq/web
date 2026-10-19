@@ -1,0 +1,14 @@
+nav{
+    background-color: black;
+}
+.navbar{
+    background-color: blueviolet;
+}
+
+#principal{ /* Es el id */
+    background-color: beige;
+}
+
+footer{
+    background-color: chartreuse !important;
+}
