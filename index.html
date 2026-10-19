@@ -1,11 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff9ed">
+  <meta name="description" content="Un rincón alegre para jugar, crear y llenar el día de color.">
+  <title>Club Chispa — un día más colorido</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="./js/script.js" defer></script>
 </head>
 <body>
-    
+  <header class="topbar wrap">
+    <a class="brand" href="#inicio" aria-label="Club Chispa, inicio"><span class="brand-mark">✳</span> club chispa</a>
+    <nav aria-label="Navegación principal">
+      <a href="#ideas">Ideas</a>
+      <a href="#reto">Reto del día</a>
+    </nav>
+    <button class="sound-button" id="mood-button" type="button"><span aria-hidden="true">☀</span> <span id="mood-label">Subir el ánimo</span></button>
+  </header>
+
+  <main id="inicio">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> UN RINCÓN PARA JUGAR</div>
+        <h1>Un día más<br> <span>colorido</span> empieza aquí.</h1>
+        <p class="hero-text">Un poquito de curiosidad, una pizca de juego y muchas ganas de pasarlo bien. ¿Qué hacemos primero?</p>
+        <a class="primary-button" href="#ideas">¡Vamos a explorar! <span aria-hidden="true">↗</span></a>
+        <div class="tiny-note"><span class="tiny-stars">✦ ✦ ✦</span> Hecho para sonreír, sin motivo.</div>
+      </div>
+      <div class="hero-art" aria-label="Ilustración de un sol sonriente entre formas coloridas">
+        <div class="art-spark spark-one">✦</div><div class="art-spark spark-two">✳</div>
+        <div class="sun-rays"></div>
+        <div class="sun-face"><span class="eye left-eye"></span><span class="eye right-eye"></span><span class="cheek left-cheek"></span><span class="cheek right-cheek"></span><span class="smile"></span></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="floaty heart">♥</div><div class="floaty flower">✿</div>
+        <div class="art-caption"><span>tu dosis de</span><strong>buena vibra</strong></div>
+      </div>
+    </section>
+
+    <section class="ideas-section" id="ideas">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><div class="eyebrow"><span class="eyebrow-dot pink-dot"></span> ELIGE TU AVENTURA</div><h2>¿Qué te apetece hoy?</h2></div>
+          <span class="heading-doodle" aria-hidden="true">↘</span>
+        </div>
+        <div class="card-grid">
+          <button class="idea-card card-pink" data-message="¡A dibujar sin reglas! Tu imaginación ya sabe el camino.">
+            <span class="card-icon">🎨</span><span class="card-kicker">CREA ALGO</span><strong>Laboratorio<br>de ideas</strong><span class="card-bottom">Colorea fuera de la línea <span>↗</span></span>
+          </button>
+          <button class="idea-card card-yellow" data-message="Mini misión: encuentra algo amarillo cerca de ti. ¡Tiempo!">
+            <span class="card-icon">🔎</span><span class="card-kicker">MIRA DE CERCA</span><strong>Cazadores<br>de detalles</strong><span class="card-bottom">El mundo está lleno de pistas <span>↗</span></span>
+          </button>
+          <button class="idea-card card-blue" data-message="¡Pies inquietos! Inventa un paso de baile y ponle nombre.">
+            <span class="card-icon">🎵</span><span class="card-kicker">MUEVE EL CUERPO</span><strong>Fiesta en<br>la sala</strong><span class="card-bottom">Un pasito y ya estás <span>↗</span></span>
+          </button>
+          <button class="idea-card card-green" data-message="Pausa de nube: inspira despacito, suelta el aire y sonríe.">
+            <span class="card-icon">🌈</span><span class="card-kicker">TOMA UN RESPIRO</span><strong>Un minuto<br>de calma</strong><span class="card-bottom">También cuenta descansar <span>↗</span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="daily wrap" id="reto">
+      <div class="daily-sticker" aria-hidden="true">✷</div>
+      <div><div class="eyebrow"><span class="eyebrow-dot"></span> RETO DEL DÍA</div><h2 id="challenge-text">Regala un cumplido sincero.</h2><p>Pequeños gestos, grandes chispas.</p></div>
+      <button class="refresh-button" id="challenge-button" type="button" aria-label="Ver otro reto">↻</button>
+    </section>
+  </main>
+
+  <footer class="footer wrap"><a class="brand footer-brand" href="#inicio"><span class="brand-mark">✳</span> club chispa</a><span>Un poquito de alegría para llevar ✨</span><a href="#inicio">Volver arriba ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
