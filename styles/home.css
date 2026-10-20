@@ -1,0 +1,58 @@
+:root{ 
+    --primario: #8c9bba;
+    --fondo: #b3d4b3;
+    --texto: #ca71e3;
+    --secundario: rgb(69, 53, 53);
+
+}
+*{
+    /*font-size: 62.5%;*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Barra de navegación */
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.navbar a:hover {
+    color:bisque;
+    background-color: var(--primario);
+}
+.navbar a:focus-visible{
+    outline: 2px solid var(--secundario);
+}
+.navbar a{
+    transition: background 2s, color 2s, transform 2s;
+}
+/* Hover es cuando sobrepones el cursor */
+.navbar a:hover{  
+    transform: translateY(-2px) scale(2) rotate(25deg);
+}
+/* Las comas son para  */
+.header,.footer{
+    background-color: var(--fondo);
+    text-align: center;
+}
+
+/* CAJA TRADICIONAL, ESTILZAR */
+#principal{
+    width: min(100% -4rem, 100rem);
+    margin: 3rem auto;
+    padding: 3rem;
+    background-color: var(--fondo);
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px #49cb42;
+}
+/* media quarys */
+@media (max-width:600px){
+    .navbar{
+        flex-direction: column;   
+    }
+    .navbar a{
+        text-align: center;
+    }
+}
