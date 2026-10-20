@@ -1,35 +1,29 @@
-const toast = document.querySelector('#toast');
-let toastTimer;
+//alert("Hola mundo");
+console.log("Hola mundo oculto"); //se usa para debuggear
 
-function showToast(message) {
-  toast.textContent = message;
-  toast.classList.add('show');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
+const nombre = "Mitzy"; //nadie mas puede cambiar su valor
+//nombre = "Valeria" //esto marca un error
+let nombre1 = "Valeria" //let para variables cambiantes
+nombre1 = "López"
+//var puede ser redeclarada o redefinida
+var nombre2 = "Yaretzy"
+console.log("Bienvenido al sistema " + nombre2);
+var nombre2 = "Mariel"
+console.log("Bienvenido al sistema " + nombre);
+console.log("Bienvenido al sistema " + nombre1);
+console.log("Bienvenido al sistema " + nombre2);
+//tipos de datos
+let edad = 20; //int
+let ciudad = "México"; //string
+let seMurio = false; //bool
+let tieneDinero = null; //nulo xd
+let simbolo = Symbol(""); 
+
+document.getElementById("name").textContent=nombre1;
+document.getElementById("age").textContent=edad;
+document.getElementById("city").textContent=ciudad;
+
+function cambiaEdad(){
+    edad++;
+    document.getElementById("age").textContent=edad
 }
-
-document.querySelectorAll('.idea-card').forEach((card) => {
-  card.addEventListener('click', () => showToast(card.dataset.message));
-});
-
-const challenges = [
-  'Regala un cumplido sincero.',
-  'Dibuja una nube con cara feliz.',
-  'Baila tu canción favorita por un minuto.',
-  'Encuentra algo bonito que normalmente no notas.',
-  'Inventa un nombre divertido para tu día.'
-];
-let challengeIndex = 0;
-document.querySelector('#challenge-button').addEventListener('click', () => {
-  challengeIndex = (challengeIndex + 1) % challenges.length;
-  const text = document.querySelector('#challenge-text');
-  text.animate([{ opacity: 0, transform: 'translateY(5px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 250 });
-  text.textContent = challenges[challengeIndex];
-});
-
-document.querySelector('#mood-button').addEventListener('click', () => {
-  document.body.classList.toggle('sunny');
-  const sunnier = document.body.classList.contains('sunny');
-  document.querySelector('#mood-label').textContent = sunnier ? '¡Más sol!' : 'Subir el ánimo';
-  showToast(sunnier ? '¡Un poquito más de sol para ti! ☀' : 'La chispa sigue aquí. ✨');
-});
