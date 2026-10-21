@@ -1,0 +1,70 @@
+:root{
+    --fondo: rgb(147, 100, 100);
+    --texto: rgb(109, 38, 38);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-size: 1.6rem;
+    /* vh y vw */
+    min-height: 100vh; 
+    padding: 6rem 2rem;
+}
+h1{
+    font-size: clamp(3.2rem, 5vw,5rem);
+    font-weight: 800; /* */
+    letter-spacing: .18rem;
+}
+/*Pseudoclase es preparar como se va a ver nuestro html como hover,...*/
+/*declaracion de un pseudoelemento, todo lo que se agregue es un estilo*/
+h1::before{
+    content: "JAVASCRIPT/IT-PRO";
+    display: block; /*Apila todo en cajas*/
+    width: fit-content;
+    margin-bottom: 2rem;
+    border: 2px solid #6a203c;
+    border-radius: 2rem;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    background-color: #cd8fa7;
+}
+/* h1::after{
+    content: "  :))  ";
+    display: block; /*Apila todo en cajas
+    width: fit-content;
+    margin-bottom: 2rem;
+    border: 1px solid #6a203c;
+    border-radius: 2rem;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    background-color: #cd8fa7;
+} */
+
+#resultado{
+    max-width: 1000px;
+    min-height: 180px;
+    margin: 0 auto;
+    padding: 3rem;
+    border: 10px dotted #7b5966;
+    box-shadow: 0.2rem .5rem 1rem #c1a9b1;
+    align-content: center;
+    text-align: center;
+
+}
+#resultado::before{
+    content: "Resultado: ";
+    display: block;
+    margin-bottom: 3rem;
+    color: aliceblue;
+}
