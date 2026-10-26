@@ -1,0 +1,82 @@
+
+html{
+    font-size: 62.5%;
+}
+:root{
+    --fondo: rgb(245, 240, 250);
+    --texto: rgb(55, 38, 70);
+}
+
+body {
+    margin: 0;
+    padding: 4rem 2rem;
+    background-color: var(--fondo);
+    color: var(--texto);
+    font: 1.6rem Arial, sans-serif;
+}
+.container{
+    max-width: 600px;
+    margin: auto;
+}
+
+.card{
+    padding: 2rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1.2rem;
+    box-shadow: 0.4px 16px 2rem rgb(80, 55, 100, 0.15);
+}
+
+label{
+    display: block;
+    margin: 1.5rem 0 0.5rem;
+    font-weight: bold;
+}
+input,button{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid rgb(205, 190, 220);
+    border-radius: 0.5rem;
+}
+button{
+    margin-top: 1.5rem;
+    border: none;
+    background: rgb(137, 99, 164);
+    color: rgb(255, 255, 255);
+}
+button:hover{
+    background: rgb(101, 57, 132);
+}
+
+#nombreRegistro,
+#passwordRegistro,
+#correoRegistro,
+#correoLogin,
+#nombreLogin,
+#passwordLogin{
+    background-color: rgb(250, 247, 253);
+}
+#formRegistro{
+    background-color: rgb(239, 230, 247);
+}
+#formLogin{
+    background-color: rgb(239, 230, 247);
+}
+.panel{
+    background-color: rgb(226, 214, 237);
+}
+#botonSesion {
+    background: none;        
+    border: none;            
+    color: #666666;        
+    font-size: 1.5rem;          
+    padding: 5px 10px;       
+    transition: color 0.3s ease; 
+}
+
+/* Efecto al pasar el cursor (Hover) */
+#botonSesion:hover {
+    color: rgb(101, 57, 132);  
+    text-decoration: underline;        
+}
+

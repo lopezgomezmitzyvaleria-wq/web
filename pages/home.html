@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../js/home.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <section class="panel">
+            <h2>Resultado</h2>
+            <p id="mensaje" aria-live="polite">Sin actividad.</p>
+            <div id="sesion"></div>
+            <button id="cerrarSesion" type="submit">
+                Cerrar sesión
+            </button>
+        </section>
+        <section class="panel" id="Practicas_FI">
+            <div class="encabezado-Practicas_FI">
+                <div>
+                    <h2>Practicas registradas</h2>
+                    <p>Datos obtenidos por API-Practicas_FI</p>
+                </div>
+                <button id="cargarDatos">Actualizar</button>
+            </div>
+            <p id="estadoDatos">Cargando Datos</p>
+            <div id="contenedorDatos"> </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

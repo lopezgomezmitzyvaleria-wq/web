@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- AQUI EL LOGIN -->
+<html lang="es">
+<!-- Registro -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de acceso</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./js/registro.js" defer></script>
+</head>
+
+<body>
+    <main class="contenedor">
+        <h1>Sistema de acceso</h1>
+
+        <section class="panel">
+            <h2>Registro</h2>
+
+            <form id="formRegistro">
+                <label for="nombreRegistro">Nombre</label>
+                <input id="nombreRegistro" required>
+
+                <label for="correoRegistro">Correo electrónico</label>
+                <input id="correoRegistro" type="email" required>
+
+                <label for="passwordRegistro">Contraseña</label>
+                <input id="passwordRegistro" type="password" minlength="6" required>
+
+                <button id="botonRegistro" type="submit">Crear cuenta</button>
+                <button id="botonSesion" type="submit">¿Ya tienes una cuenta? </button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <p id="mensaje" aria-live="polite">Sin actividad.</p>
+        </section>
+
+        
+    </main>
+</body>
+</html>
