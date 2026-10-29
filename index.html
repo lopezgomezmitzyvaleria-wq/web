@@ -1,42 +1,36 @@
 <!DOCTYPE html>
-<!-- AQUI EL LOGIN -->
+
 <html lang="es">
-<!-- Registro -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de acceso</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <script src="./js/registro.js" defer></script>
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="./js/login.js" defer></script>
 </head>
 
 <body>
-    <main class="contenedor">
-        <h1>Sistema de acceso</h1>
+    <section class="panel">
+        <h2>Iniciar sesión</h2>
 
-        <section class="panel">
-            <h2>Registro</h2>
+        <form id="formLogin">
+            <label for="correoLogin">Correo electrónico</label>
+            <input id="correoLogin" type="email" required>
 
-            <form id="formRegistro">
-                <label for="nombreRegistro">Nombre</label>
-                <input id="nombreRegistro" required>
+            <label for="passwordLogin">Contraseña</label>
+            <input id="passwordLogin" type="password" required>
 
-                <label for="correoRegistro">Correo electrónico</label>
-                <input id="correoRegistro" type="email" required>
+            <button id="sesion" type="submit">Iniciar sesión</button>
+            <button id="botonSesion" type="submit">¿No tienes cuenta? ¡Creala! </button>
+        </form>
+    </section>
+    <section class="panel">
+        <p id="mensaje" aria-live="polite">Sin actividad.</p>
+    </section>
 
-                <label for="passwordRegistro">Contraseña</label>
-                <input id="passwordRegistro" type="password" minlength="6" required>
 
-                <button id="botonRegistro" type="submit">Crear cuenta</button>
-                <button id="botonSesion" type="submit">¿Ya tienes una cuenta? </button>
-            </form>
-        </section>
 
-        <section class="panel">
-            <p id="mensaje" aria-live="polite">Sin actividad.</p>
-        </section>
-
-        
-    </main>
 </body>
+
 </html>

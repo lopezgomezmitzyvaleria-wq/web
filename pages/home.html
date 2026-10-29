@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,13 +11,11 @@
 
 <body>
     <main>
-        <section class="panel">
-            <h2>Resultado</h2>
-            <p id="mensaje" aria-live="polite">Sin actividad.</p>
+        <section class="panel" id="bienvenida">
+
+            <p id="mensaje" aria-live="polite"></p>
             <div id="sesion"></div>
-            <button id="cerrarSesion" type="submit">
-                Cerrar sesión
-            </button>
+
         </section>
         <section class="panel" id="Practicas_FI">
             <div class="encabezado-Practicas_FI">
@@ -27,9 +25,16 @@
                 </div>
                 <button id="cargarDatos">Actualizar</button>
             </div>
-            <p id="estadoDatos">Cargando Datos</p>
+            <p id="estadoDatos">Cargando Datos...</p>
             <div id="contenedorDatos"> </div>
+
+            <a href="./registroPractica.html" id="RegistroTransporte" class="btn-accion">Registrar Transporte</a>
         </section>
+
+
+        <button id="cerrarSesion" type="submit">
+            Cerrar sesión
+        </button>
     </main>
 
 </body>

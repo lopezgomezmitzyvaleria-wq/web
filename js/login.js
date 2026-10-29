@@ -2,11 +2,15 @@
 let formLogin = document.querySelector("#formLogin")
 let mensaje = document.querySelector("#mensaje")
 let sesion = document.querySelector("#sesion")
+let iniciar = document.querySelector("#botonSesion")
 
 //Definir flujo
 formLogin.addEventListener("submit", iniciarSesion)
 recuperarSesion()
+iniciar.addEventListener("click", function () {
+    window.location.href = "./pages/registro.html"
 
+})
 
 //Definir funciones
 function mostrarMensaje(texto) {
@@ -40,9 +44,9 @@ function iniciarSesion(event) {
     mostrarMensaje("Iniciaste sesión correctamente")
     //
     //mostrarSesion(datosSesion)
-    
+
     formLogin.reset()
-    window.location.href="../pages/home.html"
+    window.location.href = "../pages/home.html"
 }
 function recuperarSesion() {
     try {
@@ -51,7 +55,7 @@ function recuperarSesion() {
             let usuario = JSON.parse(datos)
             mostrarSesion(usuario)
             mostrarMensaje("Sesion recuperada")
-            cerrar.hidden=false
+            cerrar.hidden = false
         }
     } catch {
         mostrarMensaje("No fue posible cargar los datos de sesión")

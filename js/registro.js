@@ -7,8 +7,8 @@ let iniciar = document.querySelector("#botonSesion")
 
 
 //Definir flujo
-iniciar.addEventListener("click",function(){
-    window.location.href="./pages/login.html"
+iniciar.addEventListener("click", function () {
+    window.location.href = "../index.html"
 
 })
 formRegistro.addEventListener("submit", registrarUsuario)
@@ -40,7 +40,7 @@ function registrarUsuario(event) {
         localStorage.setItem("Usuarios", JSON.stringify(usuariosRegistrados))
         mostrarMensaje("Usuario registrado")
         formRegistro.reset();
-        window.location.href="./pages/login.html"
+        window.location.href = "../index.html"
     }
 }
 
