@@ -11,31 +11,46 @@
 
 <body>
     <main class="contenedor" id="home">
-        <h1>Registrar alumnos</h1>
+        <h1>Registrar transporte</h1>
         <p id="mensaje" aria-live="polite"></p>
         <section class="panel">
             <form id="formTransporte">
-                <label for="transporte_id">transporte_id</label>
-                <input type="number" id="transporte_id" required>
 
-                <label for="tipo_transporte_id">tipo_transporte_id</label>
-                <input type="number" id="tipo_transporte_id" required>
+                <label for="tipo_transporte_id">Tipo de Transporte</label>
+                <div class="contenedor">
+                    <select id="tipo_transporte_id">
+                        <option disabled>Selecciona un tipo de transporte</option>
+                        <option value="1">AUTOBÚS</option>
+                        <option value="2">AVIÓN</option>
+                        <option value="3">CAMIONETA</option>
+                        <option value="4">LANCHA</option>
+                        <option value="5">MICROBÚS</option>
+                    </select>
+                </div>
 
-                <label for="nombre_chofer">nombre_chofer</label>
+                <label for="nombre_chofer">Nombre del Chofer</label>
                 <input type="text" id="nombre_chofer" required>
 
-                <label for="capacidad_max">capacidad_max</label>
+                <label for="capacidad_max">Capacidad Maxima del transporte</label>
                 <input type="number" id="capacidad_max" required>
 
-                <label for="placa">placa</label>
+                <label for="placa">Placa</label>
                 <input type="text" id="placa" required>
 
-                <label for="empresa">empresa</label>
+                <label for="empresa">Empresa</label>
                 <input type="text" id="empresa" required>
 
                 <button type="submit">Registrar</button>
             </form>
         </section>
+
+        <button type="button" id="cargarTransportes">Ver Transportes Registrados</button>
+
+        <p id="estadoTransportes"></p>
+
+        <div id="contenedorTransportes"></div>
+
+        <button type="button" id="regresar">Regresar</button>
 
     </main>
 </body>
