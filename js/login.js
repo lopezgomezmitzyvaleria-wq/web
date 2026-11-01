@@ -8,11 +8,15 @@ let iniciar = document.querySelector("#botonSesion")
 formLogin.addEventListener("submit", iniciarSesion)
 recuperarSesion()
 iniciar.addEventListener("click", function () {
-    window.location.href = "./pages/registro.html"
+    setTimeout(() => {
+        window.location.href = "./pages/registro.html"
+    }, 1000)
+    
 
 })
 
 //Definir funciones
+
 function mostrarMensaje(texto) {
     mensaje.textContent = texto
 }
@@ -46,7 +50,10 @@ function iniciarSesion(event) {
     //mostrarSesion(datosSesion)
 
     formLogin.reset()
-    window.location.href = "../pages/home.html"
+    setTimeout(() => {
+        window.location.href = "./pages/home.html"
+    }, 1000)
+
 }
 function recuperarSesion() {
     try {

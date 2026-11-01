@@ -21,10 +21,7 @@ recuperarSesion();
 
 // Definir funciones
 function mostrarMensaje(texto) {
-    if (mensaje) {
-        mensaje.textContent = texto;
-        mensaje.className = ""; // Limpia clases previas de estilos destacados
-    }
+    mensaje.textContent = texto
 }
 
 function mostrarSesion(usuario) {
@@ -69,7 +66,9 @@ function cerrarSesion() {
         cerrar.hidden = true;
     }
     mostrarMensaje("Cerraste sesión");
-    window.location.href = "../index.html";
+    setTimeout(() => {
+        window.location.href = "../index.html";
+    }, 1000);
 }
 
 // Cargar datos desde la API

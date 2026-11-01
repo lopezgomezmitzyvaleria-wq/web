@@ -8,11 +8,12 @@ let iniciar = document.querySelector("#botonSesion")
 
 //Definir flujo
 iniciar.addEventListener("click", function () {
-    window.location.href = "../index.html"
+    setTimeout(() => {
+        window.location.href = "../index.html"
+    }, 1000)
 
 })
 formRegistro.addEventListener("submit", registrarUsuario)
-
 
 //Definir funciones
 function mostrarMensaje(texto) {
@@ -28,20 +29,32 @@ function registrarUsuario(event) {
 
     if (nombre == "" || correo == "" || contra == "") {
         mostrarMensaje("Todos los campos son obligatorios")
+        return
     } else if (contra.length < 8) {
         mostrarMensaje("La contraseña debe ser minimo 8 caracteres")
-    } else {
-
-        usuariosRegistrados.push({
-            name: nombre,
-            email: correo,
-            password: contra
-        })
-        localStorage.setItem("Usuarios", JSON.stringify(usuariosRegistrados))
-        mostrarMensaje("Usuario registrado")
-        formRegistro.reset();
-        window.location.href = "../index.html"
+        return
     }
+    for (let i = 0; i < usuariosRegistrados.length; i++) {
+        if (usuariosRegistrados[i].email == correo) {
+            mostrarMensaje("Este correo ya fue registrado. Intenta con uno nuevo.")
+            return
+        }
+    }
+    usuariosRegistrados.push({
+        name: nombre,
+        email: correo,
+        password: contra
+    })
+
+    localStorage.setItem("Usuarios", JSON.stringify(usuariosRegistrados))
+    mostrarMensaje("Usuario registrado")
+    formRegistro.reset();
+
+    setTimeout(() => {
+        window.location.href = "../index.html"
+    }, 1000)
 }
+
+
 
 

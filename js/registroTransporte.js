@@ -10,7 +10,6 @@ const regresar=document.querySelector("#regresar")
 
 regresar.addEventListener("click", function () {
     window.location.href = "./home.html"
-
 })
 async function enviarPOST(datos) {
     const respuesta = await fetch(API_BASE_URL + "/api/Practicas_FI", {
@@ -45,7 +44,6 @@ formTransporte.addEventListener("submit", async function (event) {
         const resultado = await enviarPOST(datos);
         mensaje.textContent = resultado.message;
         formTransporte.reset();
-        //window.location="home.html";
 
     } catch (error) {
         mensaje.textContent = error.message;
