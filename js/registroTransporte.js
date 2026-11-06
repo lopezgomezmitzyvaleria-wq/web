@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://propecia-department-benchmark-any.trycloudflare.com";
 
 const formTransporte = document.querySelector("#formTransporte");
 const mensaje = document.querySelector("#mensaje");
