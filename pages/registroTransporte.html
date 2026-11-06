@@ -15,33 +15,42 @@
         <p id="mensaje" aria-live="polite"></p>
         <section class="panel">
             <form id="formTransporte">
+    <div class="campo-grupo">
+        <label for="tipo_transporte_id">Tipo de Transporte</label>
+        <div class="contenedor">
+            <select id="tipo_transporte_id" name="tipo_transporte_id" required>
+                <option value="" disabled selected>Selecciona un tipo de transporte</option>
+                <option value="1">Autobús</option>
+                <option value="4">Avión</option>
+                <option value="2">Camioneta</option>
+                <option value="5">Lancha</option>
+                <option value="3">Microbús</option>
+            </select>
+        </div>
+    </div>
 
-                <label for="tipo_transporte_id">Tipo de Transporte</label>
-                <div class="contenedor">
-                    <select id="tipo_transporte_id">
-                        <option disabled>Selecciona un tipo de transporte</option>
-                        <option value="1">AUTOBÚS</option>
-                        <option value="4">AVIÓN</option>
-                        <option value="2">CAMIONETA</option>
-                        <option value="5">LANCHA</option>
-                        <option value="3">MICROBÚS</option>
-                    </select>
-                </div>
+    <div class="campo-grupo">
+        <label for="nombre_chofer">Nombre del Chofer</label>
+        <input type="text" id="nombre_chofer" name="nombre_chofer" required placeholder="Ej. Juan Pérez">
+    </div>
 
-                <label for="nombre_chofer">Nombre del Chofer</label>
-                <input type="text" id="nombre_chofer" required>
+    <div class="campo-grupo">
+        <label for="capacidad_max">Capacidad Máxima del Transporte</label>
+        <input type="number" id="capacidad_max" name="capacidad_max" min="1" required placeholder="Ej. 12">
+    </div>
 
-                <label for="capacidad_max">Capacidad Maxima del transporte</label>
-                <input type="number" id="capacidad_max" required>
+    <div class="campo-grupo">
+        <label for="placa">Placa</label>
+        <input type="text" id="placa" name="placa" required placeholder="Ej. 189-UNAM-3">
+    </div>
 
-                <label for="placa">Placa</label>
-                <input type="text" id="placa" required>
+    <div class="campo-grupo">
+        <label for="empresa">Empresa</label>
+        <input type="text" id="empresa" name="empresa" required placeholder="Ej. Transportes México">
+    </div>
 
-                <label for="empresa">Empresa</label>
-                <input type="text" id="empresa" required>
-
-                <button type="submit">Registrar</button>
-            </form>
+    <button type="submit">Registrar Transporte</button>
+</form>
         </section>
 
         <button type="button" id="cargarTransportes">Ver Transportes Registrados</button>

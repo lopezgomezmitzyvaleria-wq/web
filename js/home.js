@@ -3,7 +3,7 @@ let mensaje = document.querySelector("#mensaje");
 let sesion = document.querySelector("#sesion");
 let cerrar = document.querySelector("#cerrarSesion");
 
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://propecia-department-benchmark-any.trycloudflare.com";
 
 const contenedorDatos = document.querySelector("#contenedorDatos");
 const estadoDatos = document.querySelector("#estadoDatos");
@@ -79,7 +79,7 @@ async function cargarDatos() {
     contenedorDatos.replaceChildren();
 
     try {
-        const respuesta = await fetch("http://localhost:3000/api/Practicas_FI");
+        const respuesta = await fetch(`${API_BASE_URL}/api/Practicas_FI`);
         const resultado = await respuesta.json();
 
         if (!respuesta.ok || resultado.status != "success") {
