@@ -3,7 +3,7 @@ let mensaje = document.querySelector("#mensaje");
 let sesion = document.querySelector("#sesion");
 let cerrar = document.querySelector("#cerrarSesion");
 
-const API_BASE_URL = "https://propecia-department-benchmark-any.trycloudflare.com";
+const API_BASE_URL = "https://initiated-comparable-figured-passed.trycloudflare.com";
 
 const contenedorDatos = document.querySelector("#contenedorDatos");
 const estadoDatos = document.querySelector("#estadoDatos");
